@@ -1,0 +1,16 @@
+{
+  "name": "gatsby-components",
+  "version": "0.0.1",
+  "description": "Gatsby componenets for website dev",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gatsby",
+    "components",
+    "react"
+  ],
+  "author": "Kyle Calica",
+  "license": "ISC"
+}
