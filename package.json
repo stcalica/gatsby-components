@@ -1,19 +1,20 @@
 {
-  "name": "gatsby-style-components",
+  "name": "gatsby-ui-components",
   "version": "0.0.1",
-  "description": "Gatsby componenets for website dev",
+  "description": "Gatsby components for website ui",
   "main": "index.js",
   "scripts": {
     "build": "rm -rf dist && babel src --out-dir dist --ignore **/__tests__ && cp -r src/css dist",
     "start": "webpack-dev-server --mode development --config webpack.config.js",
     "storybook": "start-storybook",
-    "prepare": "npm run build",
-    "publish": "npm publish dist"
+    "prepare": "npm run build && cp README.md dist && cp package.json dist"
   },
   "keywords": [
     "gatsby",
     "components",
-    "react"
+    "react",
+    "ui",
+    "design"
   ],
   "author": "Kyle Calica",
   "license": "ISC",
