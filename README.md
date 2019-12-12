@@ -16,7 +16,7 @@ I am not a fan of CSS-in-JS at the moment so I just have the CSS in the `dist` f
 
   Storybook is installed. Just run `npm run storybook`.
   Webpack is for the HTML dev server but I prefer to use storybook.
-  Build `dist` package with `npm build`, test by importing from `dist` rather than `src` in `stories`. 
+  Build `dist` package with `npm build`, test by importing from `dist` rather than `src` in `stories`.
 
 # Contribute
 

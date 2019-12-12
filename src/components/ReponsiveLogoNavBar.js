@@ -27,7 +27,7 @@ const ReponsiveLogoNavBar = ( props ) => {
     </div>
       <ul className="mobile-nav-menu" id="mobile-nav-menu" ref={ mobileMenu }>
       {
-        props.links.map( link => <li className="mobile-nav-item"><Link to={link.link}> { link.title } </Link></li> )
+        props.links.map( link => <li key={ index } className="mobile-nav-item"><Link to={link.link}> { link.title } </Link></li> )
       }
       </ul>
       </div>
