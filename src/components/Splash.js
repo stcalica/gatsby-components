@@ -1,4 +1,6 @@
-import React, { useRef } from 'react'
+import React, {
+  useRef
+} from 'react'
 
 /*
 
@@ -6,16 +8,20 @@ import React, { useRef } from 'react'
 
 */
 
-const Splash = () => {
+const Splash = (props) => {
 
-  return(
-      <section className="hero">
-        {
-          props.children
-        }
-      </section>
+  return ( <
+    section className = "hero"
+    id = {
+      props.sectionId
+    } > {
+      props.children
+    } <
+    /section>
   )
 
 }
 
-export default Splash
+export {
+  Splash
+}
