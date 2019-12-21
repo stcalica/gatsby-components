@@ -7,10 +7,9 @@ import {
   action
 } from '@storybook/addon-actions';
 // TODO: switch imports by env
-//import { ReponsiveLogoNavBar } from '../dist/index.js' //test dist
-import {
-  ReponsiveLogoNavBar
-} from '../src/index.js'; // test dev
+import { ReponsiveLogoNavBar } from '../dist/index.js' //test dist
+//import {  ReponsiveLogoNavBar} from '../src/index.js'; // test dev
+
 import {
   Splash
 } from '../src/index.js';
@@ -28,38 +27,33 @@ storiesOf('ReponsiveLogoNavBar', module)
   });
 
 storiesOf('Splash', module).add('with some basic children', () => {
-  return ( <
-    Splash >
-    <
-    h2 > Some Splash Page < /h2> <
-    p > some splash page with children < /p> < /
-    Splash > );
+  return (
+    <Splash>
+      <h2> Some Splash Page </h2>
+      <p> some splash page with children </p>
+    </Splash > );
 });
 
 storiesOf('Demo Sites', module).add('Nav Bar with Splash Page', () => {
       let links = [{
-        'title': 'home',
+        'title': 'HOME',
         'link': '#home'
       }, {
-        'title': 'about',
+        'title': 'ABOUT',
         'link': '#about'
       }];
-      return ( <
-        >
-        <
-        ReponsiveLogoNavBar links = {
-          links
-        }
-        /> <
-        Splash sectionId = "home" >
-        <
-        h2 > Some Splash Page #1</h2>
-        <p>some splash page with children</p>
-      </Splash>
-      <Splash sectionId = "about" >
-        <
-        h2 > Some Splash Page# 2 < /h2> <
-        p > some splash page with children < /p> < /
-        Splash > <
-        />);
+      return (
+      <>
+        <ReponsiveLogoNavBar links = {
+            links
+          }/>
+        <Splash sectionId = "home" >
+          <h2> Some Splash Page #1</h2>
+          <p>some splash page with children</p>
+        </Splash>
+          <Splash sectionId = "about" >
+            <h2> Some Splash Page# 2 </h2>
+            <p> some splash page with children </p>
+          </Splash>
+      </>);
       });
