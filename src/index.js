@@ -3,4 +3,6 @@
 */
 
 export { ReponsiveLogoNavBar } from './components/ReponsiveLogoNavBar'
-export { Splash } from './components/Splash'
+export { HeroSection } from './components/HeroSection'
+export { SlantedSections } from './components/SlantedSections'
+export { CallToAction } from './components/CallToAction'

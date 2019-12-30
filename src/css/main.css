@@ -1,17 +1,98 @@
-/*
 html,body {
   border-sizing: border-box;
   margin: 0;
-  padding: 0;
+  padding: 3em 0 0 0;
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
 }
-*/
 
-nav {
-  box-sizing: border-box;
+.black {
   background-color: black;
   color: white;
+}
+
+.heading {
+  text-align: center;
+  margin: auto;
+  padding: 5vh;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 25vh;
+  width: 100vw;
+}
+
+.content {
+  text-align: center;
+  margin: auto;
+  padding: 5vh;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.callToAction {
+  background-size: cover;
+  position: relative;
+}
+
+/* adding padding:3em 0 0 0; for navbar */
+.hero {
+  min-height: 100vh;
+  width: 100vw;
+  padding:0 0 0 0;
+  margin: auto;
+}
+
+
+.hero-call {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  color: white;
+  position: absolute;
+  top: 50vh;
+  left: 25vw;
+
+}
+
+.hero-action-button {
+  width: 12em;
+  height: 3em;
+  border: 2px solid #2b50c8;
+  border-radius: 5px;
+  color: white;
+  background-color: blue;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 1em;
+  font-size: 1em;
+}
+
+.hero-text {
+  font-size: 2em;
+  font-weight: bold;
+
+}
+
+
+.full-width {
+  width: 100vw;
+}
+
+.slant-right {
+  clip-path: polygon(0 0,100% 0,100% 100%, 0 25vh);
+}
+
+.slant-left {
+  clip-path: polygon(0 0,100% 0, 100% 25vh, 0 100%);
+}
+
+/* nav bar */
+nav {
+  color: white;
+  box-sizing: border-box;
+  background-color: black;
   width: 100%;
   /* 3em = 16px * 3 = 48px  */
   height: 3em;
@@ -19,12 +100,6 @@ nav {
   top: 0;
   left: 0;
   z-index: 100;
-
-}
-
-a:visited, a:active  {
-  color: white;
-  text-decoration: none;
 }
 
 .nav-bar {
@@ -91,7 +166,7 @@ a:visited, a:active  {
     transform: rotate(-45deg) ;
   }
 
-  .mobile-nav-menu {
+    .mobile-nav-menu {
     color: white; /* remove */
     width: 4em;
     height: 10em;
@@ -102,60 +177,12 @@ a:visited, a:active  {
     background-color: black;
     opacity: 0.8;
     position: fixed;
-    top: 3em;
+    top: 1em;
     right: 0;
-    margin: 0;
   }
-
-  .mobile-nav-item {
-    text-align: center;
-  }
-
-
-
 }
 
-
-.centered {
-  margin: auto;
-  color: red;
-  text-align: jusitified;
-  width: 50vw;
-  position: relative;
-  top: 25vh;
-}
-
-.black {
-  background-color: black;
-  color: white;
-}
-
-.content {
-  text-align: center;
-  margin: auto;
-  padding: 5vh;
-  font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif;
-
-}
-
-/* padding 3em for nav bar*/
-.hero {
-  padding:3em 0 0 0;
-  margin: auto;
-  width: 100vw;
-  height: 100vh;
-}
-
-nav a {
+a {
  text-decoration: none;
  color: #ffffff !important;
-}
-
-.slant-right {
-  clip-path: polygon(0 0,100% 0,100% 45vh, 0 50%);
-}
-d
-.slant-left {
-  clip-path: polygon(0 0,100% 0, 100% 45vh, 0 50%);
 }

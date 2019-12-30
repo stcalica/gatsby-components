@@ -1,12 +1,13 @@
 {
   "name": "gatsby-ui-components",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Gatsby components for website ui",
   "main": "index.js",
   "scripts": {
     "build": "babel src --out-dir dist --ignore **/__tests__ && cp -r src/css dist && cp README.md dist && cp package.json dist",
     "storybook": "start-storybook",
-    "webpack": "webpack"
+    "webpack": "webpack",
+    "start": "webpack-dev-server"
   },
   "keywords": [
     "gatsby",
