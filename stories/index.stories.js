@@ -4,7 +4,13 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 // TODO: switch imports by env
 //import { ReponsiveLogoNavBar, HeroSection } from '../dist/index.js' //test dist
-import {  ReponsiveLogoNavBar, HeroSection, SlantedSections, CallToAction } from '../src/index.js'; // test dev
+import {
+  ReponsiveLogoNavBar,
+  HeroSection,
+  SlantedSections,
+  CallToAction,
+  BasicSitemapFooter
+}  from '../src/index.js'; // test dev
 //import  { ReponsiveLogoNavBar, HeroSection } from '../webpack/index.js' //webpack dist
 
 storiesOf('ReponsiveLogoNavBar', module)
@@ -45,6 +51,19 @@ storiesOf('Hero Call To Action', module).add('Call To Action', () => {
   );
 });
 
+storiesOf('Footer', module).add('Footer', () => {
+  let sitemapObj =
+    [
+      {
+        title: "test",
+        url: "/#"
+      }
+    ];
+  return(
+      <BasicSitemapFooter sitemap={ sitemapObj } />
+  );
+});
+
 storiesOf('Demo Sites', module).add('Nav Bar with HeroSection Page', () => {
       let links = [{
         'title': 'HOME',
@@ -58,6 +77,10 @@ storiesOf('Demo Sites', module).add('Nav Bar with HeroSection Page', () => {
         <ReponsiveLogoNavBar links = {
             links
           }/>
+        <CallToAction buttonText="Sign Up!" heroImage="http://jerrycahill.com/wp-content/uploads/2018/05/Hero.jpg">
+          <h2> Test </h2>
+          <p> Some test content </p>
+        </CallToAction>
         <HeroSection sectionId = "home" >
           <h2> Some Splash Page #1</h2>
           <p>some splash page with children</p>
