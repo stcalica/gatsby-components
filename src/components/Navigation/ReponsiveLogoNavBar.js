@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import {  Link} from 'gatsby'
-import '../css/main.css'
+import '../../css/main.css'
 
 const ReponsiveLogoNavBar = (props) => {
   const mobileMenu = useRef()
@@ -12,7 +12,7 @@ const ReponsiveLogoNavBar = (props) => {
   return (
     <nav>
       <div className = "nav-bar" >
-      <img className = "header-logo" src = "#" / >
+      <a className="logo-anchor" href="/"><img className = "header-logo" src = "#" / ></a>
       <ul className = "nav-list" > {
         props.links.map((link, index) => < li key = {
             `nav-${index}`

@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import '../css/main.css'
+import '../../css/main.css'
 
 // Sitemap is
 // {
