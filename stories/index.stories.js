@@ -11,7 +11,8 @@ import {
   CallToAction,
   BasicSitemapFooter,
   CurvedSection,
-  FixedNavWrapper
+  FixedNavWrapper,
+  BasicSocialBar
 }  from '../src/index.js'; // test dev
 //import  { ReponsiveLogoNavBar, HeroSection } from '../webpack/index.js' //webpack dist
 
@@ -90,6 +91,32 @@ storiesOf('Footer', module).add('Footer', () => {
     ];
   return(
       <BasicSitemapFooter sitemap={ sitemapObj } />
+  );
+});
+
+storiesOf('SocialBars', module).add('BasicSocialBar', ()=> {
+  let links =
+    [
+      {
+        title: "facebook",
+        url: "https://facebook.com"
+      },
+      {
+        title: "twitter",
+        url: "https://twitter.com"
+      },
+      {
+        title: "instagram",
+        url: "https://instagram.com"
+      },
+      {
+        title: "tumblr",
+        url: "https://tumblr.com"
+      }
+    ];
+
+  return(
+    <BasicSocialBar links={ links }/>
   );
 });
 

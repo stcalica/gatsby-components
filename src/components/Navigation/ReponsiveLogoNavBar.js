@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import {  Link} from 'gatsby'
+import { Link } from 'gatsby'
 import '../../css/main.css'
 
 const ReponsiveLogoNavBar = (props) => {

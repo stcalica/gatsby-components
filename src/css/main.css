@@ -224,3 +224,19 @@ a {
   margin: auto;
   padding: 5px;
 }
+
+.basic-social-bar-wrapper {
+  border: 2px solid black;
+  max-width: 20rem;
+  display: flex;
+  justify-content: center;
+}
+
+.basic-social-bar-map {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.social-icon {
+  padding: .2rem;
+}
