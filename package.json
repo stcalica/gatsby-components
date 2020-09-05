@@ -1,6 +1,6 @@
 {
   "name": "gatsby-ui-components",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "Gatsby components for website ui",
   "main": "index.js",
   "scripts": {
