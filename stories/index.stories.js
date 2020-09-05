@@ -19,7 +19,7 @@ storiesOf('Navigation', module)
   .add('ReponsiveLogoNavBar', () => {
     let links = [{
       'title': 'home',
-      'link': '#home'
+      'link': '/#home'
     }];
     return <ReponsiveLogoNavBar links = {
       links
@@ -115,10 +115,10 @@ storiesOf('Demo Sites', module)
 .add('Nav Bar with HeroSection Page', () => {
       let links = [{
         'title': 'HOME',
-        'link': '#home'
+        'link': '/#home'
       }, {
         'title': 'ABOUT',
-        'link': '#about'
+        'link': '/#about'
       }];
       return (
       <>
