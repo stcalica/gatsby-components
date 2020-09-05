@@ -3,7 +3,6 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 // TODO: switch imports by env
-//import { ReponsiveLogoNavBar, HeroSection } from '../dist/index.js' //test dist
 import {
   ReponsiveLogoNavBar,
   HeroSection,
@@ -12,7 +11,17 @@ import {
   BasicSitemapFooter,
   CurvedSection,
   FixedNavWrapper
-}  from '../src/index.js'; // test dev
+} from '../dist/index.js'
+
+// import {
+//   ReponsiveLogoNavBar,
+//   HeroSection,
+//   SlantedSections,
+//   CallToAction,
+//   BasicSitemapFooter,
+//   CurvedSection,
+//   FixedNavWrapper
+// }  from '../src/index.js'; // test dev
 //import  { ReponsiveLogoNavBar, HeroSection } from '../webpack/index.js' //webpack dist
 
 storiesOf('Navigation', module)
