@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import ReactDOM from 'react-dom';
 import { Link} from 'gatsby'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
+import scrollTo from 'gatsby-plugin-smoothscroll'
 import '../../css/main.css'
 
 const LinkComponent = (props) => (
@@ -11,7 +12,8 @@ const LinkComponent = (props) => (
 
 const AnchorLinkComponent = (props) => (
   <li key={props.indexKey} className = "nav-item">
-    <a href={ `/${props.link}` } > { props.title} </a></li>
+  <button onClick={() => scrollTo(`${props.link}`)}>{ props.title}</button>
+  </li>
 );
 
 const ReponsiveLogoNavBar = (props) => {

@@ -44,6 +44,7 @@
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
-    "gatsby-plugin-anchor-links": "^1.1.1"
+    "gatsby-plugin-anchor-links": "^1.1.1",
+    "gatsby-plugin-smoothscroll": "^1.2.0"
   }
 }
