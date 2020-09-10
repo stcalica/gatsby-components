@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
@@ -122,16 +122,27 @@ storiesOf('Demo Sites', module)
   )
 })
 .add('Nav Bar with HeroSection Page', () => {
+      let [ count, setCount ] = useState(0);
+      const addToCart = () => {
+        console.log("adding to count!");
+        setCount(count + 1);
+        console.log(`new count:${count}`);
+      };
       let links = [{
         'title': 'HOME',
         'link': '/#home'
       }, {
         'title': 'ABOUT',
         'link': '/#about'
+      },
+      {
+        'title': 'CART',
+        'link': '/#cart',
+        'badge': true
       }];
       return (
       <>
-        <ReponsiveLogoNavBar links = {
+        <ReponsiveLogoNavBar count={count} links = {
             links
           }/>
           <FixedNavWrapper>
@@ -156,6 +167,7 @@ storiesOf('Demo Sites', module)
                 <h2> Test </h2>
                 <p> Some test content </p>
             </CurvedSection>
+            <button onClick={ ()=>{ addToCart() }  }> Add to cart </button>
           </FixedNavWrapper>
       </>);
       });

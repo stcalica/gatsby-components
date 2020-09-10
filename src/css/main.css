@@ -157,6 +157,30 @@ nav {
   display: none;
 }
 
+.button-link {
+    border: none;
+    margin: 0;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    font-family: sans-serif;
+    text-align: center;
+    transition: background 250ms ease-in-out,
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+.button-link:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+.button-link:active {
+    transform: scale(0.99);
+}
+
 @media screen and (max-width:50rem){
   .nav-list{
     display: none;

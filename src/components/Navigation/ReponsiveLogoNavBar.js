@@ -2,19 +2,31 @@ import React, { useRef } from 'react'
 import ReactDOM from 'react-dom';
 import { Link} from 'gatsby'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
+import {  Badge, Layout  } from 'antd'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 import '../../css/main.css'
+import 'antd/dist/antd.css'
+
+const { Header } = Layout;
 
 const LinkComponent = (props) => (
   <li key={props.indexKey}  className = "nav-item">
-  <AnchorLink to={ props.link }> { props.title } </AnchorLink></li >
+  <AnchorLink className="button-link" to={ props.link }> { props.title } </AnchorLink></li >
 );
 
 const AnchorLinkComponent = (props) => (
   <li key={props.indexKey} className = "nav-item">
-  <button onClick={() => scrollTo(`${props.link}`)}>{ props.title}</button>
+  <button className="button-link" onClick={() => scrollTo(`${props.link}`)}>{ props.title}</button>
   </li>
 );
+
+const BuildNavLink = (props) => {
+  console.log(props)
+  let { link, index, count } = props
+  let contents = link.badge ? <Badge count={count}>{ link.title } </Badge> :  link.title
+  return link.link.includes('#') ? <AnchorLinkComponent key={`nav-${index}`} link={link.link.slice(link.link.search('#'))} title={contents}/> : <LinkComponent  key={`nav-${index}`} link={link.link} title={contents}/>
+
+}
 
 const ReponsiveLogoNavBar = (props) => {
   const mobileMenu = useRef()
@@ -24,12 +36,13 @@ const ReponsiveLogoNavBar = (props) => {
   }
 
   return (
+    <Header>
     <nav>
       <div className = "nav-bar" >
       <a className="logo-anchor" href="/"><img className = "header-logo" src = "#" / ></a>
       <ul className = "nav-list" > {
         props.links.map((link, index) => (
-        link.link.includes('#') ? <AnchorLinkComponent key={`nav-${index}`} link={link.link.slice(link.link.search('#'))} title={link.title}/> : <LinkComponent  key={`nav-${index}`} link={link.link} title={link.title}/>
+          <BuildNavLink link={link} index={index} count={props.count} />
       ))
       } </ul>
       <div className = "nav-mobile-btn"
@@ -59,8 +72,10 @@ const ReponsiveLogoNavBar = (props) => {
         } < /AnchorLink></li > )
     } <
     /ul> < /
-    div > <
-    /nav>
+    div >
+    { props.children }
+    </nav>
+    </Header>
   )
 }
 
