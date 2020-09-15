@@ -10,7 +10,7 @@ const BasicSocialBar = (props) => (
     {
       props.links.map(link => (
         <span className="social-icon">
-          <SocialIcon url={ link.url } />
+          <SocialIcon url={ link.url } bgColor="black"/>
         </span>
       )
     )}

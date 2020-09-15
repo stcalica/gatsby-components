@@ -239,4 +239,18 @@ a {
 
 .social-icon {
   padding: .2rem;
+  margin: auto;
+}
+
+.basic-sb-vertical-wrapper{
+  justify-content: center;
+  border: 2px solid black;
+  flex-flow: column wrap;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: hidden;
+  margin: auto;
+  padding: auto;
+  max-width: 5em;
 }
