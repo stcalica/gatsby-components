@@ -20,6 +20,14 @@ storiesOf('Navigation', module)
     let links = [{
       'title': 'home',
       'link': '#home'
+    },
+    {
+      'title': 'about',
+      'link': '#about'
+    },
+    {
+      'title': 'shop',
+      'link': '#shop'
     }];
     return <ReponsiveLogoNavBar links = {
       links

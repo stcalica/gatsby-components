@@ -6,6 +6,7 @@ const ReponsiveLogoNavBar = (props) => {
   const mobileMenu = useRef()
 
   const displayMenu = () => {
+    console.log(mobileMenu.current.style.display);
     mobileMenu.current.style.display = (mobileMenu.current.style.display === "none" || mobileMenu.current.style.display === "") ? "flex" : "none";
   }
 
@@ -34,12 +35,9 @@ const ReponsiveLogoNavBar = (props) => {
         <span className = "mobile-bar"></span>
         <span className = "mobile-bar"></span>
       </div>
-    <
-    ul className = "mobile-nav-menu"
-    id = "mobile-nav-menu"
-    ref = {
-      mobileMenu
-    } > {
+      <div id = "mobile-nav-menu"  ref = { mobileMenu }>
+    <ul className = "mobile-nav-menu">
+    {
       props.links.map((link, index) => < li key = {
           `mobile-${index}`
         }
@@ -49,7 +47,7 @@ const ReponsiveLogoNavBar = (props) => {
           link.title
         } < /Link></li > )
     } <
-    /ul> < /
+    /ul></div> < /
     div > <
     /nav>
   )
